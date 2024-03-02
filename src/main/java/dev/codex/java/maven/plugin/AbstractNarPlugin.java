@@ -12,6 +12,9 @@ public abstract class AbstractNarPlugin extends AbstractMojo {
     @Parameter
     private List<String> excludes;
 
+    @Parameter(defaultValue = "${project.build.directory}/library")
+    private String outputDirectory;
+
     @Override
     public void execute() {
         getLog().info("Hello, World");
