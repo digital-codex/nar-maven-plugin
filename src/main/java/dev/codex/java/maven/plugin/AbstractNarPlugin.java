@@ -72,10 +72,10 @@ public abstract class AbstractNarPlugin extends AbstractMojo {
             throw new MojoExecutionException(e);
         }
 
-        String[] splitAnchorName = this.getProject().getArtifactId().split("-");
-        StringBuilder anchorName = new StringBuilder(splitAnchorName[0]);
-        for (int i = 1; i < splitAnchorName.length; ++i) {
-            anchorName.append(splitAnchorName[i]);
+        String[] parts = this.getProject().getArtifactId().split("-");
+        StringBuilder anchorName = new StringBuilder();
+        for (String part : parts) {
+            anchorName.append(Strings.capitalize(part));
         }
         anchorName.append("Anchor");
 

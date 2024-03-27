@@ -16,6 +16,7 @@
 
     <properties>
         <maven-archiver.version>3.6.1</maven-archiver.version>
+        <commons.compress.version>1.26.1</commons.compress.version>
         <maven-core.version>3.9.6</maven-core.version>
     </properties>
 
@@ -25,11 +26,18 @@
             <artifactId>byte-buddy</artifactId>
             <version>1.14.12</version>
         </dependency>
+
         <dependency>
             <groupId>org.apache.maven</groupId>
             <artifactId>maven-archiver</artifactId>
             <version>${maven-archiver.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-compress</artifactId>
+            <version>${commons.compress.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.maven</groupId>
             <artifactId>maven-core</artifactId>
