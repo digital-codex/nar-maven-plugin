@@ -82,7 +82,7 @@ public abstract class AbstractNarPlugin extends AbstractMojo {
         try {
             narFile = new ByteBuddy()
                     .subclass(Object.class, ConstructorStrategy.Default.NO_CONSTRUCTORS)
-                    .name(this.getProject().getGroupId() + anchorName)
+                    .name(this.getProject().getGroupId() + "." + anchorName)
                     .defineConstructor(Visibility.PRIVATE)
                     .intercept(MethodCall.invoke(Object.class.getConstructor()))
                     .make()
